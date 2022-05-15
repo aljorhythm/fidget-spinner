@@ -8,7 +8,6 @@
 		r = (r + (event.keyCode) % rDelta) % 250;
 		g = (g + (event.keyCode) % gDelta) % 250;
 		b = (b + (event.keyCode) % bDelta) % 250;
-		console.log(r, g, b)
 		document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 	}
 </script>
