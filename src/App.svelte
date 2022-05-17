@@ -36,23 +36,23 @@ gestureZone.addEventListener('touchend', function(event) {
 
 function handleGesture() {
     if (touchendX <= touchstartX) {
-        console.log('Swiped left');
+		displayRandomBackground(touchendX)
     }
     
     if (touchendX >= touchstartX) {
-        console.log('Swiped right');
+        displayRandomBackground(touchendX)
     }
     
     if (touchendY <= touchstartY) {
-		displayRandomBackground(10)
+		displayRandomBackground(touchendY)
     }
     
     if (touchendY >= touchstartY) {
-		displayRandomBackground(10)
+		displayRandomBackground(touchstartX)
     }
     
     if (touchendY === touchstartY) {
-		displayRandomBackground(10)
+		displayRandomBackground(touchendY)
     }
 }
 </script>
