@@ -3,12 +3,17 @@
 	let rDelta = Math.round(Math.random() * 20);
 	let gDelta = Math.random() * 20;
 	let bDelta = Math.random() * 20;
+	
+	function displayRandomBackground(seed) {
+		r = (r + (seed % rDelta)) % 250;
+		g = (g + (seed % gDelta)) % 250;
+		b = (b + (seed % bDelta)) % 250;
+		document.body.style.backgroundColor = `rgba(${r}, ${g}, ${b})`;
+	}
+
 	function handleKeydown(event) {
 		const keycode = event.keyCode;
-		r = (r + (event.keyCode % rDelta)) % 250;
-		g = (g + (event.keyCode % gDelta)) % 250;
-		b = (b + (event.keyCode % bDelta)) % 250;
-		document.body.style.backgroundColor = `rgba(${r}, ${g}, ${b})`;
+		displayRandomBackground(keycode);
 	}
 </script>
 
