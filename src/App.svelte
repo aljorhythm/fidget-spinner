@@ -65,5 +65,4 @@ function handleGesture() {
 <svelte:window on:keydown={handleKeydown}/>
 
 <main>
-	TEMP
 </main>
