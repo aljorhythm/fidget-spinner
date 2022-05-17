@@ -1,14 +1,16 @@
 <script lang="ts">
-	let r = 0, g = 0, b = 0, a = 0;
-	let rDelta = Math.round(Math.random() * 20);
-	let gDelta = Math.random() * 20;
-	let bDelta = Math.random() * 20;
+	let r = 0, g = 0, b = 0;
+	let rDelta = Math.random() * 30;
+	let gDelta = Math.random() * 30;
+	let bDelta = Math.random() * 30;
 	
 	function displayRandomBackground(seed) {
 		r = (r + (seed % rDelta)) % 250;
 		g = (g + (seed % gDelta)) % 250;
 		b = (b + (seed % bDelta)) % 250;
-		document.body.style.backgroundColor = `rgba(${r}, ${g}, ${b})`;
+
+		document.body.style.transition = `background-color 0.3s linear`;
+		document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 	}
 
 	function handleKeydown(event) {
@@ -17,9 +19,9 @@
 	}
 
 	let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
+	let touchstartY = 0;
+	let touchendX = 0;
+	let touchendY = 0;
 
 const gestureZone = document.body;
 
@@ -57,10 +59,10 @@ function handleGesture() {
 }
 </script>
 
+<style>
+</style>
+
 <svelte:window on:keydown={handleKeydown}/>
 
 <main>
 </main>
-
-<style>
-</style>
