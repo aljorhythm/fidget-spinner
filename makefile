@@ -1,3 +1,6 @@
+setup:
+	git config core.hooksPath ./githooks
+
 build:
 	npm run build
 	make copy-public-to-docs
