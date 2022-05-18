@@ -38,23 +38,23 @@ gestureZone.addEventListener('touchend', function(event) {
 
 function handleGesture() {
     if (touchendX <= touchstartX) {
-		displayRandomBackground(touchendX)
+		displayRandomBackground(Math.random() * touchendX)
     }
     
     if (touchendX >= touchstartX) {
-        displayRandomBackground(touchendX)
+        displayRandomBackground(Math.random() * touchendX)
     }
     
     if (touchendY <= touchstartY) {
-		displayRandomBackground(touchendY)
+		displayRandomBackground(Math.random() * touchendY)
     }
     
     if (touchendY >= touchstartY) {
-		displayRandomBackground(touchstartX)
+		displayRandomBackground(Math.random() * touchstartX)
     }
     
     if (touchendY === touchstartY) {
-		displayRandomBackground(touchendY)
+		displayRandomBackground(Math.random() * touchendY)
     }
 }
 </script>
